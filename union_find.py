@@ -1,5 +1,8 @@
+from collections import defaultdict
+from typing import List, Set
+
 # Disjoint-set data structure, also known as union-find data structure.
-# Keeps track of `n` disjoint sets and allows merging any two sets by refering
+# Keeps track of `n` disjoint sets and allows merging any two sets by referring
 # to any one of their respective elements.
 # The use of path compression and union-by rank gives a worst case runtime of α(n)
 # for both the `find` and `union` methods, where α is the inverse Ackermann function.
@@ -31,3 +34,10 @@ class UnionFind:
             self.parents[parent1] = parent2
             self.sizes[parent2] += self.sizes[parent1]
         return True
+
+    # Return all elements partitioned into disjoint subsets.
+    def partition(self) -> List[Set[int]]:
+        subsets = defaultdict(set)
+        for node in range(len(self.parents)):
+            subsets[self.find(node)].add(node)
+        return list(subsets.keys())

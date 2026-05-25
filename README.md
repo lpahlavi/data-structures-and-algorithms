@@ -1,33 +1,46 @@
-# Repository of frequently used Data Structures and Algorithms (DSA)
+# Data Structures and Algorithms
 
-Author: Louis Pahlavi
-Date: 2022-07-30
+A reference collection of frequently used DSA implementations in Python.
+
+**Author:** Louis Pahlavi
 
 ---
 
-## Table of contents:
+## Contents
 
-**Arrays**
-* Binary search
-* Prefix sums
-* Leader (i.e. majority element)
+### Arrays
+| Topic | File |
+|---|---|
+| Binary search | [`binary_search.py`](binary_search.py) |
+| Prefix sums | [`prefix_sums.py`](prefix_sums.py) |
+| Leader (majority element) | [`leader.py`](leader.py) |
 
-**Data Structures**
-* Binary heap (i.e. min heap / max heap)
-* Prefix trie
-* Union find (i.e. Disjoint-set data structure)
+### Data Structures
+| Topic | File |
+|---|---|
+| Binary heap (min / max) | [`binary_heap.py`](binary_heap.py) |
+| Prefix trie | [`prefix_trie.py`](prefix_trie.py) |
+| Union find (Disjoint-set) | [`union_find.py`](union_find.py) |
 
-**Graph Algorithms**
-* Dijkstra's algorithm
-* Floyd-Warshall algorithm
-* Kruskal's algorithm
+### Graph Algorithms
+| Topic | File |
+|---|---|
+| Dijkstra's algorithm | [`dijkstra.py`](dijkstra.py) |
+| Floyd-Warshall algorithm | [`floyd_warshall.py`](floyd_warshall.py) |
+| Kruskal's algorithm | [`kruskal.py`](kruskal.py) |
 
-**Linked Lists**
-* Floyd's cycle detection algorithm
+### Linked Lists
+| Topic | File |
+|---|---|
+| Floyd's cycle detection | [`floyd_cycle.py`](floyd_cycle.py) |
 
-**Math**
-* Finding divisors
-* Chinese Remainder Theorem
+### Math
+| Topic | File |
+|---|---|
+| Finding divisors | [`find_divisors.py`](find_divisors.py) |
+| Chinese Remainder Theorem | [`chinese_remainder_theorem.py`](chinese_remainder_theorem.py) |
 
-**Python Standard Library**
-* Common library cheatsheet (Counter, defaultdict, deque, heapq, bisect, @cache, itertools, math)
+### Python Standard Library
+| Topic | File |
+|---|---|
+| Cheatsheet (Counter, defaultdict, deque, heapq, bisect, @cache, itertools, math, bitwise) | [`python_stdlib_cheatsheet.py`](python_stdlib_cheatsheet.py) |

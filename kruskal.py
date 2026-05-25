@@ -1,4 +1,3 @@
-from typing import List, Tuple
 from union_find import UnionFind
 
 # Kruskal's algorithm finds the minimum spanning tree (MST) of a weighted,
@@ -6,7 +5,7 @@ from union_find import UnionFind
 # a cycle. Cycle detection is handled in near-constant time using UnionFind.
 # Time complexity: O(|E| log |E|)
 # Space complexity: O(|V| + |E|)
-def kruskal(num_nodes: int, edges: List[Tuple[int, int, float]]) -> List[Tuple[int, int, float]]:
+def kruskal(num_nodes: int, edges: list[tuple[int, int, float]]) -> list[tuple[int, int, float]]:
     uf = UnionFind(num_nodes)
     mst = []
     for u, v, w in sorted(edges, key=lambda e: e[2]):

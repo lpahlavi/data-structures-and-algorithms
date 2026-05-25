@@ -3,7 +3,7 @@
 # without negative cycles.
 # Time complexity: O(n^3)
 # Space complexity: O(n^2)
-def floyd_warshall (n: int, edges: List[List[int]]) -> int:
+def floyd_warshall(n: int, edges: list[tuple[int, int, float]]) -> list[list[float]]:
     d = [[float('inf') for _ in range(n)] for _ in range(n)]
 
     for (u, v, w) in edges:

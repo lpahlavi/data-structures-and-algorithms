@@ -1,5 +1,4 @@
 from collections import defaultdict
-from typing import List, Set
 
 # Disjoint-set data structure, also known as union-find data structure.
 # Keeps track of `n` disjoint sets and allows merging any two sets by referring
@@ -18,7 +17,7 @@ class UnionFind:
         self.parents[node] = self.find(self.parents[node])
         return self.parents[node]
 
-    # Merge the sets containing nodes `node1` and `node2`. Returns `True` is a merge
+    # Merge the sets containing nodes `node1` and `node2`. Returns `True` if a merge
     # occurred, and `False` if the two nodes were already in the same set.
     def union(self, node1: int, node2: int) -> bool:
         parent1 = self.find(node1)
@@ -36,8 +35,8 @@ class UnionFind:
         return True
 
     # Return all elements partitioned into disjoint subsets.
-    def partition(self) -> List[Set[int]]:
+    def partition(self) -> list[set[int]]:
         subsets = defaultdict(set)
         for node in range(len(self.parents)):
             subsets[self.find(node)].add(node)
-        return list(subsets.keys())
+        return list(subsets.values())

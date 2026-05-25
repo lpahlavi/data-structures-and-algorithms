@@ -1,5 +1,8 @@
+import heapq
+
+
 class MinHeap:
-    def __init__(self, values: Optional[List[float]] = None):
+    def __init__(self, values: list[float] | None = None):
         self._heap = values
         self._heapify()
 
@@ -7,21 +10,21 @@ class MinHeap:
         return len(self._heap)
 
     # Push a new value onto the heap
-    # O(log(n)) time and space complexity
+    # O(log(n)) time | O(1) space
     def push(self, value: float) -> None:
         self._heap.append(value)
         self._sift_up(len(self._heap)-1)
 
     # Find and extract the smallest element from the heap
-    # O(log(n)) time and space complexity
+    # O(log(n)) time | O(1) space
     def pop(self) -> float:
         if not self._heap:
             raise IndexError('pop from an empty heap')
 
         # Cache the value to return
         min_value = self.peek()
-        
-        # Swap the heap and tail of the heap, pop the
+
+        # Swap the root and tail of the heap, pop the
         # smallest element, and fix the heap ordering
         self.swap(0, len(self._heap)-1)
         self._heap.pop()
@@ -30,16 +33,15 @@ class MinHeap:
         return min_value
 
     # Find the smallest element on the heap
-    # O(1) time and space complexity
+    # O(1) time | O(1) space
     def peek(self) -> float:
         return self._heap[0]
 
     # Turn an unordered array into a (binary) minimum heap
-    # O(n) time and O(log(n)) space complexity
+    # O(n) time | O(1) space
     def _heapify(self) -> None:
         for i in reversed(range(len(self._heap))):
             self._sift_down(i)
-
 
     def _sift_up(self, index: int) -> None:
         while index > 0 and self._heap[(index-1)//2] > self._heap[index]:
@@ -68,11 +70,10 @@ class MinHeap:
         self._heap[index1], self._heap[index2] = self._heap[index2], self._heap[index1]
 
 
-    
 class MaxHeap:
-    def __init__(self, values: Optional[List[float]] = None):
+    def __init__(self, values: list[float] | None = None):
         if values is None:
-            values = [] 
+            values = []
 
         # heapq uses a min-heap, so store the negative of
         # every number instead to form a max heap

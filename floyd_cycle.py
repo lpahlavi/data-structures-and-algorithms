@@ -1,8 +1,5 @@
-from typing import Optional
-
-
 class ListNode:
-    def __init__(self, val: int, next: 'Optional[ListNode]' = None):
+    def __init__(self, val: int, next: 'ListNode | None' = None):
         self.val = val
         self.next = next
 
@@ -12,7 +9,7 @@ class ListNode:
 # while a fast pointer advances two; if they ever meet, a cycle exists.
 # Time complexity: O(n)
 # Space complexity: O(1)
-def has_cycle(head: Optional[ListNode]) -> bool:
+def has_cycle(head: 'ListNode | None') -> bool:
     slow, fast = head, head
     while fast and fast.next:
         slow = slow.next
@@ -28,7 +25,7 @@ def has_cycle(head: Optional[ListNode]) -> bool:
 # they meet exactly at the cycle's entry node.
 # Time complexity: O(n)
 # Space complexity: O(1)
-def find_cycle_start(head: Optional[ListNode]) -> Optional[ListNode]:
+def find_cycle_start(head: 'ListNode | None') -> 'ListNode | None':
     slow, fast = head, head
     while fast and fast.next:
         slow = slow.next

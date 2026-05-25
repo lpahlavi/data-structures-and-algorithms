@@ -28,3 +28,6 @@ Date: 2022-07-30
 **Math**
 * Finding divisors
 * Chinese Remainder Theorem
+
+**Python Standard Library**
+* Common library cheatsheet (Counter, defaultdict, deque, heapq, bisect, @cache, itertools, math)

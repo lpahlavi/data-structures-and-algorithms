@@ -22,6 +22,9 @@ Date: 2022-07-30
 * Floyd-Warshall algorithm
 * Kruskal's algorithm
 
+**Linked Lists**
+* Floyd's cycle detection algorithm
+
 **Math**
 * Finding divisors
 * Chinese Remainder Theorem

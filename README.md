@@ -24,3 +24,4 @@ Date: 2022-07-30
 
 **Math**
 * Finding divisors
+* Chinese Remainder Theorem
